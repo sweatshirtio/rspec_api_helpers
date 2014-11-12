@@ -1,5 +1,4 @@
 require 'rspec_api_helpers'
-require 'rspec/active_model/mocks'
 
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f}
 
