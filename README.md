@@ -1,5 +1,6 @@
 RspecApiHelpers
 ===============
+[![Build Status](https://travis-ci.org/sweatshirtio/rspec_api_helpers.svg?branch=master)](https://travis-ci.org/sweatshirtio/rspec_api_helpers)
 
 This is a Gem to help you with all of you Rails API testing woes. The goal is
 to provide functionality to make testing APIs a breeze. I hope you like it!
