@@ -1,4 +1,8 @@
 language: ruby
+before_install:
+    - gem update --system
+install: 'bundle install'
+script: 'bundle exec rspec --format documentation'
 rvm:
   - '2.1.4'
   - '2.0.0'
