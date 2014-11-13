@@ -4,8 +4,8 @@ describe RspecApiHelpers::Strategies::JsonStrategy do
 
     FactoryGirl.define do
       factory :user do
-        name 'Mrs. Mock'
         email 'test@test.com'
+        name 'Mrs. Mock'
       end
     end
   end
@@ -13,6 +13,6 @@ describe RspecApiHelpers::Strategies::JsonStrategy do
   subject { FactoryGirl.json :user }
 
   it 'should render user as json' do
-    expect(subject).to eq '{"name":"Mrs. Mock","email":"test@test.com"}'
+    expect(subject).to eq '{"email":"test@test.com","name":"Mrs. Mock"}'
   end
 end
