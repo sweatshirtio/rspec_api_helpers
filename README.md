@@ -17,6 +17,16 @@ Or install it yourself as:
 
     $ gem install rspec_api_helpers
 
+Include it in your spec_helper
+
+    ```ruby
+    RSpec.configure do |config|
+      # ...
+      config.include RspecApiHelpers
+      # ...
+    end
+    ```
+
 ## Usage
 
 1. Built it strategy for coercing FactoryGirl factories into json:
