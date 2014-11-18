@@ -17,11 +17,11 @@ describe RspecApiHelpers::Json do
   subject { parse_json data }
 
   describe '.parse_json' do
-    it 'should have indifferent access' do
+    it 'has indifferent hash access' do
       expect(subject[:email]).to eq 'test@test.com'
     end
 
-    it 'should have indifferent access (nested)' do
+    it 'has indifferent hash access for nested hashes' do
       expect(subject[:location][:city]).to eq 'Somewhere'
     end
   end
@@ -29,12 +29,15 @@ describe RspecApiHelpers::Json do
   describe '.response_body' do
     before { allow(response).to receive(:body) { data } }
 
-    it 'should return a hash' do
+    it 'returns a hash' do
       expect(response_body).to be_a Hash
     end
 
-    it 'return correct data' do
+    it 'parses JSON correctly' do
       expect(response_body[:email]).to eq 'test@test.com'
+      expect(response_body[:data]).to eq 'is good'
+      expect(response_body[:location][:city]).to eq 'Somewhere'
+      expect(response_body[:location][:state]).to eq 'Cool'
     end
   end
 end
