@@ -19,13 +19,13 @@ Or install it yourself as:
 
 Include it in your spec_helper
 
-    ```ruby
-    RSpec.configure do |config|
-      # ...
-      config.include RspecApiHelpers
-      # ...
-    end
-    ```
+```ruby
+RSpec.configure do |config|
+  # ...
+  config.include RspecApiHelpers
+  # ...
+end
+```
 
 ## Usage
 
