@@ -12,7 +12,7 @@ describe RspecApiHelpers::Strategies::JsonStrategy do
 
   subject { FactoryGirl.json :user }
 
-  it 'should render user as json' do
+  it 'represents user in JSON format' do
     expect(subject).to eq '{"email":"test@test.com","name":"Mrs. Mock"}'
   end
 end
