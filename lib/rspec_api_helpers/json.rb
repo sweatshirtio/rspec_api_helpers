@@ -1,3 +1,5 @@
+require 'active_support'
+
 module RspecApiHelpers
   module Json
     def response_body
