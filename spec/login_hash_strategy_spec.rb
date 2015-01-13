@@ -1,6 +1,12 @@
 describe RspecApiHelpers::Strategies::LoginHashStrategy do
   before do
-    DummyUser = Class.new { attr_accessor :email, :password }
+    DummyUser = Class.new do
+      attr_accessor :email, :password
+
+      def save!
+        self
+      end
+    end
 
     FactoryGirl.define do
       factory :dummy_user do
