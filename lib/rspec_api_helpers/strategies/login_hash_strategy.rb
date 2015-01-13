@@ -4,7 +4,7 @@ module RspecApiHelpers
   module Strategies
     class LoginHashStrategy
       def initialize
-        @strategy = FactoryGirl.strategy_by_name(:build).new
+        @strategy = FactoryGirl.strategy_by_name(:create).new
       end
 
       delegate :association, to: :@strategy
