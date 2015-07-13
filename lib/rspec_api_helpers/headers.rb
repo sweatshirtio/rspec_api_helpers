@@ -8,7 +8,7 @@ module RspecApiHelpers
       headers = OpenStruct.new
       headers.json = {
         'CONTENT_TYPE' => 'application/json',
-        'ACCEPT' => 'application/json'
+        'HTTP_ACCEPT' => 'application/json'
       }
       headers
     end
