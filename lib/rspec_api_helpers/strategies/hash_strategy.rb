@@ -1,5 +1,6 @@
 require 'factory_girl'
 require 'json'
+require 'active_support/core_ext'
 
 module RspecApiHelpers
   module Strategies
@@ -11,7 +12,7 @@ module RspecApiHelpers
       delegate :association, to: :@strategy
 
       def result(evaluation)
-        JSON.parse @strategy.result(evaluation).to_json
+        JSON.parse(@strategy.result(evaluation).to_json).symbolize_keys
       end
     end
   end

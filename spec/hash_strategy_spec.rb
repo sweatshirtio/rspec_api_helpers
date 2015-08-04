@@ -13,7 +13,7 @@ describe RspecApiHelpers::Strategies::HashStrategy do
   subject { FactoryGirl.hash :person }
 
   it 'represents user in JSON format' do
-    hash = { 'email' => 'test@test.com', 'name' => 'Mrs. Mock' }
+    hash = { :email => 'test@test.com', :name => 'Mrs. Mock' }
     expect(subject).to eq hash
   end
 end
